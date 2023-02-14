@@ -6,3 +6,9 @@ The user can add dots and the program draws the Voronoi's map around those dots
 
 
 More information about [Voronoi diagram](https://en.wikipedia.org/wiki/Voronoi_diagram)
+
+## TO DO
+
+* Draw dots OK
+* Draw bisector
+* Draw and fill areas

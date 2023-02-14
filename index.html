@@ -4,8 +4,57 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Voronoi Diagram</title>
+	<style>
+		.dot{
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			border-radius: 50%;
+		}
+	</style>
 </head>
 <body>
-	
+	<p id= 'output'></p>
+	<button onclick="drawBisector()" >Bisector</button>
+<script>
+	document.onmousemove= mouseCoordinates;
+	document.onclick = drawDots;
+	var output= document.getElementById('output');
+
+	function mouseCoordinates(event){
+
+	var xPos= event.clientX;
+
+	var yPos= event.clientY;
+
+	output.innerHTML= "Coordinate (X) : " + xPos + " " + "pixels <br>Coordinate (Y) : " + yPos + " " + "pixels";
+
+	}
+
+	function drawDots(event)
+	{
+		var xPos= event.clientX;
+
+		var yPos= event.clientY;
+
+		var dotElement = document.createElement('div');
+		dotElement.classList.add("dot");
+
+		dotElement.style.left = xPos + "px";
+  		dotElement.style.top = yPos + "px";
+  		dotElement.style.backgroundColor = "red";
+  		dotElement.dataset.x = xPos;
+  		dotElement.dataset.y = yPos;
+
+
+		document.body.append(dotElement);
+	}
+
+	function drawBisector(event)
+	{
+		console.log('going good')
+	}
+
+</script>
 </body>
 </html>
